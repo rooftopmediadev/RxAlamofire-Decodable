@@ -1,11 +1,11 @@
 use_frameworks!
 
 target 'RxAlamofire-Decodable_Example' do
-  pod 'RxAlamofire-Decodable', :path => '../'
+  pod 'RxAlamofire+Decodable', :path => '../'
 
   target 'RxAlamofire-Decodable_Tests' do
     inherit! :search_paths
+    pod 'RxBlocking'
 
-    
   end
 end
