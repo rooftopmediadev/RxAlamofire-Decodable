@@ -45,7 +45,7 @@
 		6D520C3C8E2A0312ADA96859 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7AC72BBD879D59AF9453617E /* Pods-RxAlamofire-Decodable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamofire-Decodable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxAlamofire-Decodable_Tests/Pods-RxAlamofire-Decodable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8F260569A6D8D7B349017DD0 /* Pods-RxAlamofire-Decodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAlamofire-Decodable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxAlamofire-Decodable_Example/Pods-RxAlamofire-Decodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A218FF7BD3C7B15291360F59 /* RxAlamofire+Decodable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "RxAlamofire+Decodable.podspec"; path = "../RxAlamofire+Decodable.podspec"; sourceTree = "<group>"; };
+		A218FF7BD3C7B15291360F59 /* RxAlamofire+Decodable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "RxAlamofire+Decodable.podspec"; path = "../RxAlamofire+Decodable.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C755DE6E04B16A76718685AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
