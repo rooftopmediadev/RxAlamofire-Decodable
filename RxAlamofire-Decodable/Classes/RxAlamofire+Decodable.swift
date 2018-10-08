@@ -6,7 +6,17 @@
 //
 
 import RxSwift
+import Alamofire
 import RxAlamofire
+
+extension ObservableType where E == DataRequest {
+    
+    public func decodable<T: Decodable>(as type: T.Type? = nil, decoder: JSONDecoder? = nil) -> Observable<T> {
+        return self.flatMap {
+            $0.rx.responseData()
+        }.decodable(as: type, decoder: decoder)
+    }
+}
 
 extension ObservableType where E == (HTTPURLResponse, Data) {
     
@@ -22,6 +32,6 @@ extension ObservableType where E == (HTTPURLResponse, Any) {
     public func decodable<T: Decodable>(as type: T.Type? = nil, decoder: JSONDecoder? = nil) -> Observable<T> {
         return self.map { response, object in
             (response, try JSONSerialization.data(withJSONObject: object, options: []))
-        }.decodable(as: T.self, decoder: decoder)
+        }.decodable(as: type, decoder: decoder)
     }
 }
