@@ -17,7 +17,7 @@ RxAlamofire-Decodable is available through [CocoaPods](https://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RxAlamofire-Decodable'
+pod 'RxAlamofire+Decodable'
 ```
 
 ## Author
