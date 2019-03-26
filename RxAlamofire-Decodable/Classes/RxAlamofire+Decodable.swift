@@ -52,9 +52,9 @@ extension ObservableType where E == (HTTPURLResponse, Data) {
         decoder: JSONDecoder? = nil,
         _ mapper: ((HTTPURLResponse, Data, Result<T>) -> Result<T>)? = nil) -> Observable<T> {
         return self.flatMap { response, data -> Observable<T> in
-            let result = Result {
+            let result = Result({
                 try (decoder ?? JSONDecoder()).decode(T.self, from: data)
-            }
+            })
             return Observable.from(mapper?(response, data, result) ?? result)
         }
     }
@@ -67,9 +67,9 @@ extension ObservableType where E == (HTTPURLResponse, Any) {
         decoder: JSONDecoder? = nil,
         _ mapper: ((HTTPURLResponse, Any, Result<T>) -> Result<T>)? = nil) -> Observable<T> {
         return self.flatMap { response, object -> Observable<T> in
-            let result = Result {
+            let result = Result({
                 try JSONSerialization.data(withJSONObject: object, options: [])
-            }
+            })
             switch result {
             case .success(let data):
                 return Observable.just((response, data))
